@@ -1,15 +1,15 @@
-# ---- Data (nặng, tái sinh được từ seed) ----
+# ---- Data (heavy, reproducible from seed) ----
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 
-# block indices là artifact NHẸ + tái lập -> giữ trong git
-# (nếu muốn bỏ, mở comment 2 dòng dưới)
+# block indices are a light + reproducible artifact -> keep in git
+# (uncomment the two lines below to exclude them)
 # data/blocks/*
 # !data/blocks/.gitkeep
 
-# ---- Results (tùy chọn: có thể muốn commit kết quả cuối) ----
+# ---- Results (optional: you may want to commit final results) ----
 results/per_block/*
 results/figures/*
 !results/per_block/.gitkeep
@@ -22,7 +22,7 @@ __pycache__/
 .pytest_cache/
 *.egg-info/
 
-# ---- Môi trường ----
+# ---- Environment ----
 .venv/
 .env
 
