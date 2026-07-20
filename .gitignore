@@ -1,0 +1,32 @@
+# ---- Data (heavy, reproducible from seed) ----
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# block indices are a light + reproducible artifact -> keep in git
+# (uncomment the two lines below to exclude them)
+# data/blocks/*
+# !data/blocks/.gitkeep
+
+# ---- Results (optional: you may want to commit final results) ----
+results/per_block/*
+results/figures/*
+!results/per_block/.gitkeep
+!results/figures/.gitkeep
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# ---- Environment ----
+.venv/
+.env
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+*:Zone.Identifier

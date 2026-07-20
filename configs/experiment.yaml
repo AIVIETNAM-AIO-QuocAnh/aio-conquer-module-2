@@ -1,0 +1,42 @@
+# ============================================================
+# EXPERIMENT CONFIG — single source of truth
+# All parameters are read from here, NOT hard-coded in logic.
+# Convention: each role edits only its own section (by owner label)
+# to avoid stepping on each other.
+# ============================================================
+
+meta:
+  project: "aio-conquer-module-2"
+  experiment_name: "scaling_pca_classic_ml"
+  config_version: "0.1.0"          # bump on design changes -> traceable results
+
+# ---------- [DATA — AI Engineer Data] ----------
+dataset:
+  name: "fashion_mnist"
+  source: "openml"                 # fetch_openml('Fashion-MNIST', version=1)
+  openml_version: 1
+  n_classes: 10
+  n_features: 784                  # 28 x 28 after flatten
+  dtype: "float32"
+  official_train_size: 60000
+  official_test_size: 10000
+
+split:
+  strategy: "stratified_blocks"    # NOT standard K-Fold
+  n_blocks: 10                     # PROPOSED — pending Tech Leader approval
+  train_block_size: 6000           # 60000 / n_blocks
+  test_block_size: 1000            # 10000 / n_blocks
+  stratified: true                 # keep the 10-class ratio
+  overlap: false                   # blocks do not overlap
+  stratification_tolerance: 0.01   # max class-ratio deviation per block
+
+reproducibility:
+  random_seed: 42
+
+# ---------- [PATHS] ----------
+paths:
+  raw: "data/raw"
+  processed: "data/processed"
+  blocks: "data/blocks"
+  results: "results/per_block"
+  figures: "results/figures"

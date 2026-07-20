@@ -1,0 +1,391 @@
+{
+  "schema_version": "1.0.0",
+  "config_version": "0.1.0",
+  "split": {
+    "strategy": "stratified_blocks",
+    "n_blocks": 10,
+    "train_block_size": 6000,
+    "test_block_size": 1000,
+    "stratified": true,
+    "overlap": false,
+    "stratification_tolerance": 0.01
+  },
+  "reproducibility": {
+    "random_seed": 42,
+    "sklearn_version": "1.7.2",
+    "numpy_version": "2.2.6",
+    "generated_at": "2026-07-20T18:39:27.977290+00:00"
+  },
+  "blocks": [
+    {
+      "block_id": 0,
+      "train": {
+        "file": "train_block_00.npy",
+        "size": 6000,
+        "checksum_sha256": "88b0245dc7b6863279bd20e5f2ff79a3a90694182c82948c0cb0854fc82ac4bb",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_00.npy",
+        "size": 1000,
+        "checksum_sha256": "120f03660ad5a9820d9fec037f4f6713d64d6284657f76af9bae61efb0856169",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 1,
+      "train": {
+        "file": "train_block_01.npy",
+        "size": 6000,
+        "checksum_sha256": "d93402b88fc8a8a20eae6357397a9e51435f39dadd066eeb46c747c754508d47",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_01.npy",
+        "size": 1000,
+        "checksum_sha256": "4334c5dbf0fbae79939639968e674e531c0301f6a4f472bb284aaa34d77fc7a0",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 2,
+      "train": {
+        "file": "train_block_02.npy",
+        "size": 6000,
+        "checksum_sha256": "5703505bb849168d978fab463caf2529980f479fbc492754bbfdcf646a73b716",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_02.npy",
+        "size": 1000,
+        "checksum_sha256": "f63a0a0318a6b5d8e6f3ac683acc4306b0859d49eb7624bd1e7ccd2358eb1c5f",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 3,
+      "train": {
+        "file": "train_block_03.npy",
+        "size": 6000,
+        "checksum_sha256": "1b2d01ca91ceb922bcc9979ee2d6a8c7fe07e33baeb9ec5547da937278509dc1",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_03.npy",
+        "size": 1000,
+        "checksum_sha256": "d25c815d79588ce1179444efeb89d4eaa08d7d6be3ac6c8965d12641c33f55bd",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 4,
+      "train": {
+        "file": "train_block_04.npy",
+        "size": 6000,
+        "checksum_sha256": "53382bc79e7c122b8b459278bd3a76c71e03128652240811121cd01d632b3104",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_04.npy",
+        "size": 1000,
+        "checksum_sha256": "dce9e1dcb91b07bd747589ff7f0f009321b24d662d08394cb72c22c15e3c6972",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 5,
+      "train": {
+        "file": "train_block_05.npy",
+        "size": 6000,
+        "checksum_sha256": "7d01f5eb0cdbb44c287077178bb1d7f8fd153d1d226002345948f53007b3bdce",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_05.npy",
+        "size": 1000,
+        "checksum_sha256": "7884321f19a4701ad3540c479297cb6531a219b913a39afa0a382529d5861015",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 6,
+      "train": {
+        "file": "train_block_06.npy",
+        "size": 6000,
+        "checksum_sha256": "ea1d82c03fceee84c2acafca818f8f505cbdbce4c6a034b8adab2c4813793669",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_06.npy",
+        "size": 1000,
+        "checksum_sha256": "26d27987e78f159afd9d35d4ddf5c4ee77f8d6facf79efc315d9305adf274ef0",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 7,
+      "train": {
+        "file": "train_block_07.npy",
+        "size": 6000,
+        "checksum_sha256": "835c3db893595515758fb08e8f778cbb622b03463e6ffd4f2385528405fe901c",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_07.npy",
+        "size": 1000,
+        "checksum_sha256": "7552bbffab65a7896d007ac27c6d8f9176f59b6233a5d75fdc3347a1d0a4b0d5",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 8,
+      "train": {
+        "file": "train_block_08.npy",
+        "size": 6000,
+        "checksum_sha256": "06a081bc2d12638aa2750c426ad8d0bb85e1a13205ef6c2b58f91543a731155c",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_08.npy",
+        "size": 1000,
+        "checksum_sha256": "e069e217919e8f88c150529303d8e18d7a14f29cd3f30c7af0520e8eead6426c",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    },
+    {
+      "block_id": 9,
+      "train": {
+        "file": "train_block_09.npy",
+        "size": 6000,
+        "checksum_sha256": "ae1fe976165f6b05bab0059af65ba6229fb0e58a66b85cd8af6cc13d325f10d8",
+        "class_counts": {
+          "0": 600,
+          "1": 600,
+          "2": 600,
+          "3": 600,
+          "4": 600,
+          "5": 600,
+          "6": 600,
+          "7": 600,
+          "8": 600,
+          "9": 600
+        }
+      },
+      "test": {
+        "file": "test_block_09.npy",
+        "size": 1000,
+        "checksum_sha256": "64b376e9c1d634885b37e08f937f6f8dc957ae4fa6820ef421ad6c2f0209b9cd",
+        "class_counts": {
+          "0": 100,
+          "1": 100,
+          "2": 100,
+          "3": 100,
+          "4": 100,
+          "5": 100,
+          "6": 100,
+          "7": 100,
+          "8": 100,
+          "9": 100
+        }
+      }
+    }
+  ]
+}
