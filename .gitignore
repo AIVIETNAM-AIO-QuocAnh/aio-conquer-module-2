@@ -1,0 +1,32 @@
+# ---- Data (nặng, tái sinh được từ seed) ----
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# block indices là artifact NHẸ + tái lập -> giữ trong git
+# (nếu muốn bỏ, mở comment 2 dòng dưới)
+# data/blocks/*
+# !data/blocks/.gitkeep
+
+# ---- Results (tùy chọn: có thể muốn commit kết quả cuối) ----
+results/per_block/*
+results/figures/*
+!results/per_block/.gitkeep
+!results/figures/.gitkeep
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+
+# ---- Môi trường ----
+.venv/
+.env
+
+# ---- Editor / OS ----
+.vscode/
+.idea/
+*:Zone.Identifier
