@@ -33,6 +33,20 @@ split:
 reproducibility:
   random_seed: 42
 
+# ---------- [Pipeline — AI Engineer Pipeline] ----------
+cv: 5
+hyperparam_space:
+  KNeighborsClassifier: 
+    n_neighbors: [3, 5, 7, 9]
+    weights: ['uniform', 'distance']
+  LogisticRegression:
+    C: [0.01, 0.1, 1, 10]
+    solver: ['lbfgs']
+    max_iter: [100, 200, 300]
+  RandomForestClassifier:
+    n_estimators: [100, 200]
+    max_depth: [10,None]
+    max_features: ['sqrt']
 # ---------- [PATHS] ----------
 paths:
   raw: "data/raw"
