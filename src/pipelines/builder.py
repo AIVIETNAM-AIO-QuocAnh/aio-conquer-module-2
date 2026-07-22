@@ -58,14 +58,14 @@ def build_pipeline_from_setting(
     
     Supported setting IDs:
     - 'no_scaler_no_pca' : Case 1 (No Scaler & No PCA)
-    - 'no_scaler_pca'    : Case 2 (No Scaler & PCA)
-    - 'scaler_no_pca'    : Case 3 (Scaler & No PCA)
+    - 'scaler_no_pca'    : Case 2 (Scaler & No PCA)
+    - 'scaler_pca'       : Case 3 (Scaler & PCA)
     """
 
     settings_map: Dict[str, Dict[str, bool]] = {
         "no_scaler_no_pca": {"use_scaler": False, "use_pca": False},
-        "no_scaler_pca":    {"use_scaler": False, "use_pca": True},
         "scaler_no_pca":    {"use_scaler": True,  "use_pca": False},
+        "scaler_pca":       {"use_scaler": True,  "use_pca": True},
     }
 
     if setting_id not in settings_map:

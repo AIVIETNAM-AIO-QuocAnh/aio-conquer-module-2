@@ -6,12 +6,10 @@ def get_model(model_key: str, random_state: int = 42):
     models_map = {
         "knn": KNeighborsClassifier(n_jobs=-1),
         "logistic_regression": LogisticRegression(
-            random_state=random_state, 
-            n_jobs=-1
+            random_state=random_state
         ),
         "random_forest": RandomForestClassifier(
-            random_state=random_state, 
-            n_jobs=-1
+            random_state=random_state
         )
     }
 
