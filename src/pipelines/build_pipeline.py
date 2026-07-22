@@ -38,10 +38,13 @@ class BuildPipeline:
             X_train_preprocessed = preprocessor.preprocess(X_train)
             X_test_preprocessed = preprocessor.preprocess(X_test)
 
+            # print(X_train.sum(),X_train_preprocessed.sum()) # check xem data có được scale hay không
+
             # truyền data vào cho bộ train_test làm việc
             train_test = TrainTest([X_train_preprocessed, y_train],[X_test_preprocessed, y_test])
             train_test.run()
             
+            # Các bước tiếp theo là tính toán d() để đưa ra báo cáo
         
     # def log(): #đưa các kết quả từ run() ra .csv/.txt
         

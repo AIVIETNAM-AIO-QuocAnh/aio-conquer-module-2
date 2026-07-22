@@ -42,10 +42,10 @@ hyperparam_space:
   LogisticRegression:
     C: [0.01, 0.1, 1, 10]
     solver: ['lbfgs']
-    max_iter: [100, 200, 300]
+    max_iter: [500, 700]
   RandomForestClassifier:
     n_estimators: [100, 200]
-    max_depth: [10,None]
+    max_depth: [10] 
     max_features: ['sqrt']
 # ---------- [PATHS] ----------
 paths:

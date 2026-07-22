@@ -37,5 +37,3 @@ class TrainTest:
 
             # Test
             predictions = cv_model.predict(self.test_data[0])
-        
-            
