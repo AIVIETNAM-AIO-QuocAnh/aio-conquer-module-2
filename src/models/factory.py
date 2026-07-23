@@ -4,11 +4,11 @@ from sklearn.ensemble import RandomForestClassifier
 
 def get_model(model_key: str, random_state: int = 42):
     models_map = {
-        "knn": KNeighborsClassifier(n_jobs=-1),
-        "logistic_regression": LogisticRegression(
+        "KNeighborsClassifier": KNeighborsClassifier(),
+        "LogisticRegression": LogisticRegression(
             random_state=random_state
         ),
-        "random_forest": RandomForestClassifier(
+        "RandomForestClassifier": RandomForestClassifier(
             random_state=random_state
         )
     }

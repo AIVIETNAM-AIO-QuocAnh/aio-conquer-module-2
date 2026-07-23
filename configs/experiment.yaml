@@ -33,20 +33,6 @@ split:
 reproducibility:
   random_seed: 42
 
-# ---------- [Pipeline — AI Engineer Pipeline] ----------
-cv: 5
-hyperparam_space:
-  KNeighborsClassifier: 
-    n_neighbors: [3, 5, 7, 9]
-    weights: ['uniform', 'distance']
-  LogisticRegression:
-    C: [0.01, 0.1, 1, 10]
-    solver: ['lbfgs']
-    max_iter: [500, 700]
-  RandomForestClassifier:
-    n_estimators: [100, 200]
-    max_depth: [10] 
-    max_features: ['sqrt']
 # ---------- [PATHS] ----------
 paths:
   raw: "data/raw"
@@ -54,22 +40,25 @@ paths:
   blocks: "data/blocks"
   results: "results/per_block"
   figures: "results/figures"
-
+# ---------- [Pipeline — AI Engineer Pipeline & Model] ----------
+grid_search: 
+  k_fold: 5
+  scoring: 'accuracy'
 models:
-  knn:
+  KNeighborsClassifier:
     param_grid:
-      model__n_neighbors: [3, 5, 7, 9, 11]
-      model__weights: ["uniform", "distance"]
-      model__metric: ["euclidean", "manhattan"]
+      n_neighbors: [3, 5, 7, 9, 11]
+      weights: ["uniform", "distance"]
+      metric: ["euclidean", "manhattan"]
 
-  logistic_regression:
+  LogisticRegression:
     param_grid:
-      model__C: [0.01, 0.1, 1.0, 10.0]
-      model__solver: ["lbfgs"]
-      model__max_iter: [500]
+      C: [0.01, 0.1, 1.0, 10.0]
+      solver: ["lbfgs"]
+      max_iter: [500]
 
-  random_forest:
+  RandomForestClassifier:
     param_grid:
-      model__n_estimators: [50, 100, 200]
-      model__max_depth: [null, 10, 20]
-      model__min_samples_split: [2, 5]
+      n_estimators: [50, 100, 200]
+      max_depth: [null, 10, 20]
+      min_samples_split: [2, 5]
