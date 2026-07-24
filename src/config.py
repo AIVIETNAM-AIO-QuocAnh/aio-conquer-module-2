@@ -1,5 +1,6 @@
 from pathlib import Path
 import yaml
+import sys
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = PROJECT_ROOT / "configs" / "experiment.yaml"
