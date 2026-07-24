@@ -27,3 +27,18 @@ def resolve_path(cfg: dict, key: str) -> Path:
         raise KeyError(f"Path '{key}' not found in config. Available: {available}")
 
     return PROJECT_ROOT / paths[key]
+
+def save(result, key, data):
+    if key != "pipeline":
+        result[key] = data
+        return result
+
+    # key == "pipeline"
+    scale_flag, pca_flag, n_components = data
+
+    if pca_flag == 0:
+        result[key] = "scaled" if scale_flag else "raw"
+    else:
+        result[key] = f"pca_{int(n_components*100)}" if n_components is not None else "no_pca"
+
+    return result

@@ -41,13 +41,14 @@ paths:
   results: "results/per_block"
   figures: "results/figures"
 # ---------- [Pipeline — AI Engineer Pipeline & Model] ----------
+
 grid_search: 
   k_fold: 5
   scoring: 'accuracy'
 models:
   KNeighborsClassifier:
     param_grid:
-      n_neighbors: [3, 5, 7, 9, 11]
+      n_neighbors: [3, 5]
       weights: ["uniform", "distance"]
       metric: ["euclidean", "manhattan"]
 
@@ -59,6 +60,10 @@ models:
 
   RandomForestClassifier:
     param_grid:
-      n_estimators: [50, 100, 200]
-      max_depth: [null, 10, 20]
-      min_samples_split: [2, 5]
+      n_estimators: [50, 75]
+      max_depth: [5, 10]
+      min_samples_split: [2, 4]
+
+explain_var: 
+  A: 0.7
+  B: 0.9

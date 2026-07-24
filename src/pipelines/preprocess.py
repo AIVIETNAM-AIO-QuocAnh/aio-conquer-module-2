@@ -8,11 +8,14 @@ class Preprocess:
         self.flag_scale = flag_scale
         self.flag_pca = flag_pca
         self.n_components = n_components
-    def preprocess(self, data):
-        if self.flag_scale:
+    def preprocess(self, X_train, X_test):
+        if self.flag_scale or self.flag_pca:
             scaler = StandardScaler()
-            data = scaler.fit_transform(data)
-        elif self.flag_pca:
+            X_train = scaler.fit_transform(X_train)
+            X_test = scaler.transform(X_test)
+        elif (self.flag_pca) and (self.n_components is not None):
             pca = PCA(n_components=self.n_components)
-            data = pca.fit_transform(data)
-        return data
+            X_train = pca.fit_transform(X_train)
+            X_test = pca.transform(X_test)
+        return [X_train, X_test]
+
