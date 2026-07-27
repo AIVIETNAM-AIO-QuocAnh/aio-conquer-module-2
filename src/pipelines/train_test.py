@@ -19,7 +19,7 @@ class TrainTest:
     def __init__(self, train_data, test_data):
         self.train_data = train_data
         self.test_data = test_data
-    def run(self, block, pipeline, time_preprocess_train, time_preprocess_test, results):
+    def run(self, block, pipeline, time_preprocess_train, time_preprocess_test, n_features_before, n_features_after, results):
         for model_key in model_keys:
             
             # Train
@@ -57,6 +57,8 @@ class TrainTest:
             save(result, 'block_id', block)
             save(result, 'pipeline', pipeline)
             save(result, 'model', model_key)
+            save(result, 'n_features_before', n_features_before)
+            save(result, 'n_features_after', n_features_after)
             save(result, 'best_params', grid_search.best_params_)
             save(result, 'accuracy', accuracy)
             save(result, 'macro_f1', macro_f1)
