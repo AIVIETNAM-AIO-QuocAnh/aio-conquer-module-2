@@ -19,14 +19,9 @@ class TrainTest:
     def __init__(self, train_data, test_data):
         self.train_data = train_data
         self.test_data = test_data
-    def run(self, block, pipeline, preprocess_time, results):
+    def run(self, block, pipeline, time_preprocess_train, time_preprocess_test, results):
         for model_key in model_keys:
-            print(f"    Current model: {model_key}")
-            result = {}
-            save(result, 'block_id', block)
-            save(result, 'pipeline', pipeline)
-            save(result, 'model', model_key)
-
+            
             # Train
             model = get_model(model_key, random_state=cfg['reproducibility']['random_seed'])
 
@@ -37,25 +32,35 @@ class TrainTest:
                 scoring=cfg['grid_search']['scoring']
             )
 
-            start_time = time.perf_counter()
+            start_fit = time.perf_counter()
             grid_search.fit(self.train_data[0], self.train_data[1])
-            fit_runtime_sec = time.perf_counter() - start_time
-
-
-            print("     Best hyperparams:", grid_search.best_params_)
-            print("     Best Score:", grid_search.best_score_)
-            save(result, 'fit_runtime_sec', fit_runtime_sec)
-            save(result, 'best_params', grid_search.best_params_)
+            fit_runtime_sec = time.perf_counter() - start_fit + time_preprocess_train
 
             # Test
             start_infer = time.perf_counter()
             y_pred = grid_search.predict(self.test_data[0]) #[0] = X_test_preprocessed
+            inference_runtime_sec = time.perf_counter() - start_infer + time_preprocess_test
+
+            # Score
             accuracy = accuracy_score(self.test_data[1], y_pred) #[1] = y_test
             macro_f1 = f1_score(self.test_data[1], y_pred, average='macro')
-            inference_runtime_sec = time.perf_counter() - start_infer + preprocess_time
 
+
+            # Log
+            print("============================================================")
+            print("Current block:", block)
+            print(f"    Current model: {model_key}")
+            print("     Best hyperparams:", grid_search.best_params_)
+            print("     Best Score:", grid_search.best_score_)
+
+            result = {}
+            save(result, 'block_id', block)
+            save(result, 'pipeline', pipeline)
+            save(result, 'model', model_key)
+            save(result, 'best_params', grid_search.best_params_)
             save(result, 'accuracy', accuracy)
             save(result, 'macro_f1', macro_f1)
+            save(result, 'fit_runtime_sec', fit_runtime_sec)
             save(result, 'inference_runtime_sec', inference_runtime_sec)
 
             results.append(result)
