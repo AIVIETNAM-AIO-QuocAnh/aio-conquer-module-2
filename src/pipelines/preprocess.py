@@ -22,7 +22,8 @@ class Preprocess:
             start_scale_test = time.perf_counter()
             X_test = scaler.transform(X_test)
             self.time_preprocess_test += time.perf_counter() - start_scale_test
-        elif (self.flag_pca) and (self.n_components is not None):
+        if (self.flag_pca) and (self.n_components is not None):
+            print("Components: ",self.n_components)
             pca = PCA(n_components=self.n_components)
 
             start_pca_train = time.perf_counter()
