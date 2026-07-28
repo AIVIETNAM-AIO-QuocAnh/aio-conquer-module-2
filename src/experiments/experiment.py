@@ -16,21 +16,21 @@ cfg = load_config()
 # first_experiment.log('Scaling.csv')
 
 # Thí nghiệm 2: PCA
-
     # Case 0: được tái sử dụng từ kết quả sau cùng của thí nghiệm 1 (để n_components = None)
-# second_experiment = BuildPipeline(flag_scale = False, flag_pca = True, n_components=None)
-# second_experiment.run() 
-# second_experiment.log('PCA.csv') 
+second_experiment = BuildPipeline(flag_scale = False, flag_pca = True)
+second_experiment.run() 
+second_experiment.log('PCA.csv') 
     # Case 1: Scale -> PCA(50%) -> model -> result
-# second_experiment = BuildPipeline(flag_scale = True, flag_pca = True, n_components = cfg['explain_var']['A'])
-# second_experiment.run() 
-# second_experiment.log('PCA.csv') 
+second_experiment = BuildPipeline(flag_scale = True, flag_pca = True, n_components = cfg['explain_var']['A'])
+second_experiment.run() 
+second_experiment.log('PCA.csv') 
 
     # Case 2: Scale -> PCA(75%) -> model -> result
-# second_experiment = BuildPipeline(flag_scale = True, flag_pca = True, n_components = cfg['explain_var']['B'])
-# second_experiment.run() 
-# second_experiment.log('PCA.csv') 
-    # Case 1: Scale -> PCA(90%) -> model -> result
-# second_experiment = BuildPipeline(flag_scale = True, flag_pca = True, n_components = cfg['explain_var']['C'])
-# second_experiment.run() 
-# second_experiment.log('PCA.csv') 
+second_experiment = BuildPipeline(flag_scale = True, flag_pca = True, n_components = cfg['explain_var']['B'])
+second_experiment.run() 
+second_experiment.log('PCA.csv') 
+
+    # Case 3: Scale -> PCA(90%) -> model -> result
+second_experiment = BuildPipeline(flag_scale = True, flag_pca = True, n_components = cfg['explain_var']['C'])
+second_experiment.run() 
+second_experiment.log('PCA.csv') 

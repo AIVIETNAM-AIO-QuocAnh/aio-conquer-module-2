@@ -35,10 +35,13 @@ class BuildPipeline:
             X_train_preprocessed, X_test_preprocessed, time_preprocess_train, time_preprocess_test = preprocessor.preprocess(X_train, X_test) 
 
             print("Check preprocess:",X_train.sum(),X_train_preprocessed.sum()) # check xem data có được scale hay không
+            n_features_before = X_train.shape[1]
+            n_features_after = X_train_preprocessed.shape[1]
+            print("Check n_features:", n_features_before, "->", n_features_after) # số chiều trước/sau preprocessing
 
             # truyền data vào cho bộ train_test làm việc
             train_test = TrainTest([X_train_preprocessed, y_train],[X_test_preprocessed, y_test])
-            train_test.run(block, pipeline, time_preprocess_train, time_preprocess_test, self.results)
+            train_test.run(block, pipeline, time_preprocess_train, time_preprocess_test, n_features_before, n_features_after, self.results)
             
             # Các bước tiếp theo là tính toán d() để đưa ra báo cáo
         
@@ -52,5 +55,3 @@ class BuildPipeline:
             header=not path.exists(), # chỉ ghi header nếu file chưa tồn tại
             index=False,
         )
-
-        
