@@ -76,16 +76,13 @@ def draw_scaling_time(df_scaling, time_tag):
     return plt
 
 # PCA
-    # CODE GO HERE
 def draw_pca_performance(df_pca):
     # Description:
     return 0
 
-
-
 # Save 
 def save_fig(plt,file_name):
-    path = resolve_path(cfg, 'results') / file_name
+    path = resolve_path(cfg, 'figures') / file_name
     plt.savefig(path)
 
 def main():
