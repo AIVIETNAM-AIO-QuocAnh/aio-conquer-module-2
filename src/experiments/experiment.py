@@ -1,19 +1,19 @@
 from src.pipelines.build_pipeline import BuildPipeline
-from src.config import load_config
+from src.config import load_config, read_results
 
 cfg = load_config()
 # Thí nghiệm 1: Scaling 
 # 2 case: no scale & scale -> model -> result được trả về trong chính biến experiment
 
     # Case 1 : 
-first_experiment = BuildPipeline(flag_scale = False)
-first_experiment.run() 
-first_experiment.log('Scaling.csv')
+# first_experiment = BuildPipeline(flag_scale = False)
+# first_experiment.run() 
+# first_experiment.log('Scaling.csv')
 
     # Case 2:
-first_experiment = BuildPipeline(flag_scale = True)
-first_experiment.run()
-first_experiment.log('Scaling.csv')
+# first_experiment = BuildPipeline(flag_scale = True)
+# first_experiment.run()
+# first_experiment.log('Scaling.csv')
 
 # Thí nghiệm 2: PCA
 
