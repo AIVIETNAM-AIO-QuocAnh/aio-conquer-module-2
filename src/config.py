@@ -1,6 +1,7 @@
 from pathlib import Path
 import yaml
 import sys
+import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG = PROJECT_ROOT / "configs" / "experiment.yaml"
@@ -42,3 +43,8 @@ def save(result, key, data):
         result[key] = f"pca_{int(n_components*100)}" if n_components is not None else "no_pca"
 
     return result
+
+def read_results(cfg, file_name):
+    path_csv = resolve_path(cfg,'results') / file_name
+    df = pd.read_csv(path_csv)  
+    return df

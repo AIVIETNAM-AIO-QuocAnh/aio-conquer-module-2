@@ -9,12 +9,6 @@ data/processed/*
 # data/blocks/*
 # !data/blocks/.gitkeep
 
-# ---- Results (optional: you may want to commit final results) ----
-results/per_block/*
-results/figures/*
-!results/per_block/.gitkeep
-!results/figures/.gitkeep
-
 # ---- Python ----
 __pycache__/
 *.py[cod]

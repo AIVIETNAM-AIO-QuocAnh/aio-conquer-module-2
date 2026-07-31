@@ -1,0 +1,121 @@
+block_id,pipeline,model,n_features_before,n_features_after,best_params,accuracy,macro_f1,fit_runtime_sec,inference_runtime_sec
+0,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.813,0.8145067062259047,16.504223251999974,0.44355872999949497
+0,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.833,0.83188227793338,31.009871692999695,0.010576208999736991
+0,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.83,0.8267968874002275,35.82598935899932,0.025557045999448746
+1,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.814,0.8142954488159313,16.029082436999488,0.45554027700018196
+1,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.833,0.8317787491415045,35.58270680699934,0.0124770090005768
+1,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.847,0.8436505578118888,36.19970315599949,0.027576997001233394
+2,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.818,0.8175733457944903,16.399370614999498,0.5142801569991207
+2,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.832,0.8302353248471654,35.187795205999464,0.011567910999474407
+2,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 50}",0.839,0.8366975714774426,34.72322605999943,0.01903161900008854
+3,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}",0.813,0.8127544854738096,16.57759167399945,0.5257291519992577
+3,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.829,0.8272617963241953,41.12309103199914,0.010958913999274955
+3,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.843,0.8414213911151014,36.68265507999968,0.02451033799934521
+4,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.817,0.8182146082873402,16.76992816999973,0.474254512000698
+4,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.821,0.8216415425191166,34.75991291199989,0.014201851000507304
+4,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.834,0.8316658752949568,37.90476158799993,0.02797133300009591
+5,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 3, 'weights': 'distance'}",0.804,0.8045030011524202,15.827418697000212,0.43656449299942324
+5,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.82,0.818504531437231,35.1108761659998,0.011269050999544561
+5,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.844,0.840812352485397,35.755939197999396,0.026382643999568245
+6,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.822,0.821818303432092,17.31097090000003,0.5263439200007269
+6,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.826,0.8250341252998729,36.31435177599997,0.00993548299993563
+6,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.837,0.8355949485367018,36.02801782300048,0.025499919000139926
+7,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.806,0.8068213428018893,16.093773837999834,0.41082642400124314
+7,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.819,0.8172687868211739,32.720167933000084,0.010687677000532858
+7,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.838,0.8346608876517602,36.47861162100071,0.024338902000636153
+8,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.814,0.8145038641810893,16.621612975000062,0.510853956999199
+8,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.832,0.8309571949646074,36.71682079200036,0.011026621999008057
+8,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.821,0.8186504538057477,37.379540989000816,0.025954273998650024
+9,no_pca,KNeighborsClassifier,784,784,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}",0.813,0.8122539514589764,16.46701840700007,0.44152407299952756
+9,no_pca,LogisticRegression,784,784,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.844,0.8429195692941092,34.165592918000584,0.006463140000050771
+9,no_pca,RandomForestClassifier,784,784,"{'max_depth': 20, 'n_estimators': 100}",0.837,0.8344459646479508,35.9876358169995,0.020626494999305578
+0,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.708,0.7066996409698485,0.8086374869999418,0.008420087001468346
+0,pca_50,LogisticRegression,784,5,"{'C': 10.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.71,0.7022886146143207,9.466366407999885,0.004149428000346234
+0,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 100}",0.728,0.726793576432154,7.826311754000017,0.016887714001313725
+1,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.736,0.7334392352121243,0.9466371779990368,0.019862719998855027
+1,pca_50,LogisticRegression,784,5,"{'C': 10.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.693,0.6873976746695976,10.22079835600016,0.015727148999758356
+1,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 100}",0.74,0.7374861151440026,8.261060042999816,0.028708390998872346
+2,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.707,0.7072002260096569,1.4118216420001772,0.009310133999861137
+2,pca_50,LogisticRegression,784,5,"{'C': 1.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.691,0.6813754837738443,10.970033386000068,0.004675934999795572
+2,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 100}",0.744,0.7419605926024533,8.536185376000503,0.018287379000867077
+3,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.719,0.7157514588039927,2.53511706000063,0.01127212800020061
+3,pca_50,LogisticRegression,784,5,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.695,0.6875973074758156,12.307470341000226,0.006510983001135173
+3,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 50}",0.72,0.7201169148003989,9.397551470000508,0.013508635001016955
+4,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'uniform'}",0.704,0.698426019860634,0.8495965260008234,0.011488309000014851
+4,pca_50,LogisticRegression,784,5,"{'C': 10.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.686,0.679359099007778,9.617009943000994,0.0065401349993408076
+4,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 100}",0.718,0.7158925952256633,7.937405549000687,0.01851949499996408
+5,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.717,0.7132498667906185,0.8865549820011438,0.007718070000009902
+5,pca_50,LogisticRegression,784,5,"{'C': 1.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.721,0.7100864051751758,10.279311374000827,0.002865426999051124
+5,pca_50,RandomForestClassifier,784,5,"{'max_depth': 10, 'n_estimators': 50}",0.736,0.7269831918737576,7.576839658000608,0.007170451999627403
+6,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.715,0.7128727647149782,0.7948091309990559,0.007363745000475319
+6,pca_50,LogisticRegression,784,5,"{'C': 1.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.692,0.6848037855127742,9.791924928999833,0.002919561000453541
+6,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 50}",0.716,0.7114256241018859,7.509516592998807,0.009445358000448323
+7,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.734,0.7325565572397734,1.0130867330008186,0.017258846999538946
+7,pca_50,LogisticRegression,784,5,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.69,0.683241690627843,9.770403662000717,0.012696932000835659
+7,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 100}",0.732,0.72893707694932,7.729811317000895,0.024273803999676602
+8,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.73,0.7271113974598942,0.8626145010002801,0.016248135999376245
+8,pca_50,LogisticRegression,784,5,"{'C': 10.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.694,0.6855841990401654,9.941173654000522,0.01130772199940111
+8,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 100}",0.738,0.7341403029234981,8.014106515001004,0.0268422629997076
+9,pca_50,KNeighborsClassifier,784,5,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.714,0.7112006640250057,15.742636219000815,0.02699149399995804
+9,pca_50,LogisticRegression,784,5,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.691,0.6843804699625013,27.8965087710003,0.0135946469999908
+9,pca_50,RandomForestClassifier,784,5,"{'max_depth': 20, 'n_estimators': 100}",0.743,0.7399332112040894,22.27209032800056,0.02681781800038152
+0,pca_75,KNeighborsClassifier,784,32,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.806,0.8067363533227704,1.6679278559986415,0.04053512700011197
+0,pca_75,LogisticRegression,784,32,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.798,0.7970999285061131,10.025921300997652,0.010990037000738084
+0,pca_75,RandomForestClassifier,784,32,"{'max_depth': 20, 'n_estimators': 100}",0.819,0.8174521752144479,15.74045754799954,0.02259052400040673
+1,pca_75,KNeighborsClassifier,784,31,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'uniform'}",0.805,0.8022003409799984,1.7248512860005576,0.04214782800045214
+1,pca_75,LogisticRegression,784,31,"{'C': 1.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.813,0.8104326352835185,10.937689520000276,0.01264374700076587
+1,pca_75,RandomForestClassifier,784,31,"{'max_depth': 20, 'n_estimators': 100}",0.833,0.8302343470923323,15.615137512999354,0.024612627999886172
+2,pca_75,KNeighborsClassifier,784,32,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.815,0.8143745264279516,1.805023266999342,0.023446345001502777
+2,pca_75,LogisticRegression,784,32,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.809,0.8062406654423044,10.646150137999939,0.016361533002054784
+2,pca_75,RandomForestClassifier,784,32,"{'max_depth': 20, 'n_estimators': 100}",0.821,0.8191990514690491,15.695376912999564,0.02859582500241231
+3,pca_75,KNeighborsClassifier,784,30,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'uniform'}",0.816,0.8147341274934032,1.7114266640001006,0.04128410700104723
+3,pca_75,LogisticRegression,784,30,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.808,0.8058344169232774,10.86390482600109,0.012256658001206233
+3,pca_75,RandomForestClassifier,784,30,"{'max_depth': 20, 'n_estimators': 100}",0.822,0.8198968821311216,15.434099263999087,0.0251251260015124
+4,pca_75,KNeighborsClassifier,784,31,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.811,0.810163279720977,1.6362195140009135,0.020706823999717017
+4,pca_75,LogisticRegression,784,31,"{'C': 10.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.806,0.8073086840167442,11.206003265000618,0.013784418999421177
+4,pca_75,RandomForestClassifier,784,31,"{'max_depth': 20, 'n_estimators': 100}",0.815,0.8138869130330253,15.493638414000088,0.026024069999039057
+5,pca_75,KNeighborsClassifier,784,31,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}",0.808,0.8073024943431125,1.5418812510015414,0.038171405998582486
+5,pca_75,LogisticRegression,784,31,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.804,0.8023027416397899,11.317209201000878,0.007337220999033889
+5,pca_75,RandomForestClassifier,784,31,"{'max_depth': 20, 'n_estimators': 100}",0.816,0.8127937572958686,15.57587660000172,0.019558486997993896
+6,pca_75,KNeighborsClassifier,784,31,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.795,0.7962377633259508,1.566745637999702,0.03799172000071849
+6,pca_75,LogisticRegression,784,31,"{'C': 1.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.796,0.7948058974129374,10.874984988999131,0.012909134999063099
+6,pca_75,RandomForestClassifier,784,31,"{'max_depth': 20, 'n_estimators': 100}",0.812,0.8108577591839976,15.454999675999716,0.023955254999236786
+7,pca_75,KNeighborsClassifier,784,31,"{'metric': 'euclidean', 'n_neighbors': 5, 'weights': 'distance'}",0.806,0.8041390445466922,1.6387773330006894,0.017396377999830293
+7,pca_75,LogisticRegression,784,31,"{'C': 10.0, 'max_iter': 500, 'solver': 'lbfgs'}",0.792,0.7884856042442249,11.337087785001131,0.01031178099947283
+7,pca_75,RandomForestClassifier,784,31,"{'max_depth': 20, 'n_estimators': 100}",0.832,0.828598118531624,15.25215102600123,0.022082621999288676
+8,pca_75,KNeighborsClassifier,784,30,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}",0.806,0.8068502190950044,1.567875709000873,0.04429869600062375
+8,pca_75,LogisticRegression,784,30,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.811,0.8086866859164443,10.378015755999513,0.01133275199936179
+8,pca_75,RandomForestClassifier,784,30,"{'max_depth': 20, 'n_estimators': 100}",0.814,0.8137667335399674,15.707798760000514,0.022945651999179972
+9,pca_75,KNeighborsClassifier,784,31,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}",0.817,0.8152948595114026,1.5921439559988357,0.04251636399931158
+9,pca_75,LogisticRegression,784,31,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.815,0.814820268568805,10.535758589998295,0.011059547998229391
+9,pca_75,RandomForestClassifier,784,31,"{'max_depth': 20, 'n_estimators': 100}",0.83,0.8270659334332373,15.480355235999014,0.022211914998479187
+0,pca_90,KNeighborsClassifier,784,129,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.815,0.817008373443129,3.580905471000733,0.09787942600087263
+0,pca_90,LogisticRegression,784,129,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.837,0.8358716888875936,19.202872400999695,0.009793561999686062
+0,pca_90,RandomForestClassifier,784,129,"{'max_depth': 20, 'n_estimators': 100}",0.824,0.8210292591933264,32.55003865400067,0.02213056999971741
+1,pca_90,KNeighborsClassifier,784,128,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'distance'}",0.811,0.8105223690698402,3.4554318969985616,0.0274176519978937
+1,pca_90,LogisticRegression,784,128,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.829,0.8276395267793022,28.477144534999752,0.01249373700011347
+1,pca_90,RandomForestClassifier,784,128,"{'max_depth': 20, 'n_estimators': 100}",0.825,0.821704282162884,33.27470114699827,0.025950472998374607
+2,pca_90,KNeighborsClassifier,784,130,"{'metric': 'euclidean', 'n_neighbors': 5, 'weights': 'distance'}",0.824,0.8240749207357061,3.9990923830009706,0.02132976599750691
+2,pca_90,LogisticRegression,784,130,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.824,0.8228463325952194,24.562843123001585,0.009061856997504947
+2,pca_90,RandomForestClassifier,784,130,"{'max_depth': 20, 'n_estimators': 100}",0.829,0.8264317784688826,32.603848876000484,0.021308370000042487
+3,pca_90,KNeighborsClassifier,784,126,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}",0.816,0.8169544417723221,3.735772141999405,0.1036350960002892
+3,pca_90,LogisticRegression,784,126,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.824,0.8217064813876214,24.56237889500153,0.012061291999998502
+3,pca_90,RandomForestClassifier,784,126,"{'max_depth': 20, 'n_estimators': 100}",0.841,0.8383152013957892,32.554450132000056,0.02435232499919948
+4,pca_90,KNeighborsClassifier,784,127,"{'metric': 'euclidean', 'n_neighbors': 10, 'weights': 'uniform'}",0.813,0.8129326350975905,3.722756606000985,0.029008372001044336
+4,pca_90,LogisticRegression,784,127,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.823,0.8242253643609688,24.598197246999916,0.014380633001565002
+4,pca_90,RandomForestClassifier,784,127,"{'max_depth': 20, 'n_estimators': 100}",0.821,0.8195305410423117,31.97916919200179,0.02653758700034814
+5,pca_90,KNeighborsClassifier,784,127,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.823,0.8226841042577094,3.887694316001216,0.10280339600103616
+5,pca_90,LogisticRegression,784,127,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.829,0.8280319103842311,23.674279988003036,0.012017868000839371
+5,pca_90,RandomForestClassifier,784,127,"{'max_depth': 20, 'n_estimators': 100}",0.81,0.8061315473158098,32.521482650003236,0.024556580001444672
+6,pca_90,KNeighborsClassifier,784,127,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.819,0.8207516419937934,3.5860488090002036,0.10491148999972211
+6,pca_90,LogisticRegression,784,127,"{'C': 0.1, 'max_iter': 500, 'solver': 'lbfgs'}",0.82,0.8188552494710872,28.35952998099856,0.013641194000229007
+6,pca_90,RandomForestClassifier,784,127,"{'max_depth': 20, 'n_estimators': 100}",0.816,0.8136237588030959,32.21613978300047,0.025563062001310755
+7,pca_90,KNeighborsClassifier,784,128,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.815,0.8154531913646711,3.6990094920020056,0.09455199600051856
+7,pca_90,LogisticRegression,784,128,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.816,0.8150606222809553,27.79871670400098,0.011154391000673058
+7,pca_90,RandomForestClassifier,784,128,"{'max_depth': 20, 'n_estimators': 100}",0.822,0.8172880047854362,32.263966374999654,0.02340150600139168
+8,pca_90,KNeighborsClassifier,784,124,"{'metric': 'manhattan', 'n_neighbors': 5, 'weights': 'distance'}",0.825,0.826814708199557,3.6464587720001873,0.08894593900004111
+8,pca_90,LogisticRegression,784,124,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.819,0.8180864640894638,20.479184465999424,0.011754607001421391
+8,pca_90,RandomForestClassifier,784,124,"{'max_depth': 20, 'n_estimators': 100}",0.818,0.8151604096311716,32.74334300800001,0.024432605001493357
+9,pca_90,KNeighborsClassifier,784,129,"{'metric': 'manhattan', 'n_neighbors': 10, 'weights': 'distance'}",0.827,0.8280435757818762,3.6251072699997167,0.0997742970012041
+9,pca_90,LogisticRegression,784,129,"{'C': 0.01, 'max_iter': 500, 'solver': 'lbfgs'}",0.839,0.8374718442378122,23.19500867199895,0.006845746001999942
+9,pca_90,RandomForestClassifier,784,129,"{'max_depth': 20, 'n_estimators': 100}",0.835,0.8321681805235551,32.75770687600016,0.019619408001744887
