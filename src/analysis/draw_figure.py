@@ -19,7 +19,7 @@ SCALING_PIPELINE_PALETTE = {
     "scaled": "#3EC35D",
 }
 
-PCA_PIPELINE_ORDER = ["no_pca", "pca_50", "pca_75", "pca_90"]
+PCA_PIPELINE_ORDER = ["no_pca", "pca_90", "pca_75", "pca_50"]
 PCA_PIPELINE_PALETTE = {
     "no_pca": "#3973D0",
     "pca_50": "#E47B3E",
@@ -79,6 +79,16 @@ def draw_boxplot_by_pipeline(
             box.set_alpha(0.8)
         ax.plot([], [], color=pipeline_palette[pipeline], label=pipeline, linewidth=8)
 
+    # Vẽ đường gạch dọc ở giữa các vị trí model
+    for x in x_base[:-1]:
+        ax.axvline(
+            x + 0.5, 
+            color="gray", 
+            linestyle="--", 
+            linewidth=1, 
+            alpha=0.6
+        )
+
     ax.set_xticks(x_base)
     ax.set_xticklabels(MODEL_ORDER)
     ax.set_xlabel("Model")
@@ -95,7 +105,7 @@ def draw_paired_line_by_pipeline(
     df,
     pipeline_order,
     pipeline_palette,
-    metric="macro_f1",
+    metric="accuracy",
     figsize=(18, 5),
 ):
     fig, axes = plt.subplots(
@@ -186,39 +196,36 @@ def draw_bubble_runtime(
     runtime_col="fit_runtime_sec",
     metric="macro_f1",
     title=None,
-    figsize=(10, 6),
+    figsize=(11, 5.5),
 ):
     summary = (
         df.groupby(["pipeline", "model"], observed=True)
         .agg(metric_mean=(metric, "mean"), runtime_mean=(runtime_col, "mean"))
         .reset_index()
     )
- 
+
     fig, ax = plt.subplots(figsize=figsize, dpi=DPI)
     x_positions = {p: i for i, p in enumerate(pipeline_order)}
- 
-    # 1. BIẾN ĐỔI LOGARITHM ĐỂ GIỮ TỶ LỆ CHUẨN XÁC
+
+    # 1. BIẾN ĐỔI LOGARITHM
     log_runtime = np.log1p(summary["runtime_mean"])
- 
-    # Scale diameter theo log
     d_min, d_max = 12, 45
     log_min, log_max = log_runtime.min(), log_runtime.max()
- 
+
     if log_max > log_min:
         summary["diameter"] = d_min + (log_runtime - log_min) / (log_max - log_min) * (d_max - d_min)
     else:
         summary["diameter"] = (d_min + d_max) / 2
- 
-    # Diện tích = (đường kính)^2
+
     summary["size"] = summary["diameter"] ** 2
- 
+
     for model in MODEL_PALETTE:
         sub = summary[summary["model"] == model]
         if sub.empty:
             continue
- 
+
         xs = [x_positions[p] for p in sub["pipeline"]]
- 
+
         ax.scatter(
             xs,
             sub["metric_mean"],
@@ -228,60 +235,67 @@ def draw_bubble_runtime(
             edgecolors="white",
             linewidth=1,
         )
- 
+
     ax.set_xticks(list(x_positions.values()))
     ax.set_xticklabels(list(x_positions.keys()))
     ax.set_xlabel("Pipeline")
     ax.set_ylabel(metric)
     ax.set_title(title or f"{metric} vs {runtime_col} by pipeline (bubble size = log-scaled runtime)")
- 
-    # Legend Model - Góc dưới trái
+
+    # Giữ khoảng đệm biên chuẩn
+    ax.set_xlim(-0.5, len(pipeline_order) - 0.5)
+    y_min, y_max = summary["metric_mean"].min(), summary["metric_mean"].max()
+    y_pad = (y_max - y_min) * 0.15 if y_max > y_min else 0.05
+    ax.set_ylim(y_min - y_pad, y_max + y_pad)
+
+    # 1. LEGEND MODEL
     model_handles = [
         plt.Line2D([0], [0], marker="o", color="w", markerfacecolor=c, markersize=8)
         for c in MODEL_PALETTE.values()
     ]
-    ax.legend(
+    # Lề dưới của box legend bằng đúng đáy trục Ox
+    leg_model = ax.legend(
         model_handles,
         list(MODEL_PALETTE.keys()),
         loc="lower left",
-        bbox_to_anchor=(0.02, 0.15),
-        fontsize=7,
+        bbox_to_anchor=(1.02, 0.0),
+        fontsize=8,
         title="Model",
-        labelspacing=0.8,
-        borderpad=0.8,
+        borderaxespad=0,
     )
- 
-    plt.tight_layout()
- 
-    # 2. VẼ THƯỚC ĐO DIAMETER THEO THANG LOG (GÓC DƯỚI PHẢI)
+
+    # 2. THƯỚC ĐO DIAMETER
     r_min = summary["runtime_mean"].min()
     r_max = summary["runtime_mean"].max()
- 
+
     legend_vals = np.array(
         [r_min, r_min + (r_max - r_min) * 0.1, r_min + (r_max - r_min) * 0.4, r_max]
     )
- 
+
     log_vals = np.log1p(legend_vals)
     x_coords = (
         (log_vals - log_min) / (log_max - log_min) if log_max > log_min else np.linspace(0, 1, 4)
     )
- 
-    ax_leg = fig.add_axes([0.70, 0.16, 0.26, 0.08])
+
+    ax_leg = fig.add_axes([0.80, 0.35, 0.14, 0.06])
     ax_leg.axis("off")
- 
+
     y_line = 0.5
     ax_leg.plot([0, 1], [y_line, y_line], color="gray", lw=1)
- 
+
     for x, val in zip(x_coords, legend_vals):
         ax_leg.plot([x, x], [y_line - 0.15, y_line + 0.15], color="gray", lw=1)
         ax_leg.text(x, y_line - 0.35, f"{val:.1f}", ha="center", va="top", fontsize=7, color="#333333")
- 
+
     ax_leg.text(0.0, y_line + 0.3, "Diameter (log scale)", ha="left", va="bottom", fontsize=8, color="#333333")
-    ax_leg.text(0.5, y_line - 0.5, f"{runtime_col} (s)", ha="center", va="top", fontsize=7, color="#333333")
- 
+    ax_leg.text(0.5, y_line - 0.7, f"{runtime_col} (s)", ha="center", va="top", fontsize=7, color="#333333")
+
     ax_leg.set_xlim(-0.05, 1.05)
-    ax_leg.set_ylim(0, 1)
- 
+    ax_leg.set_ylim(-0.2, 1.2)
+
+    # Dành lề bên phải rộng đủ để chú thích không bị đè hay tràn viền
+    fig.subplots_adjust(right=0.78, bottom=0.15)
+
     return plt
 
 
